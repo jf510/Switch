@@ -1,0 +1,61 @@
+/* 
+The sidebar consists of the header and the chat section. 
+This styling arranges the header and chat section into a column formation and
+tells the sidebar to take up 35% of the available space. The available space is given by
+the dimentions set for teh app__body in App.css. The app__body was given a height of 90vh 
+and width of 90vw.
+*/
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 0.35;
+    border-right: 1px solid lightgray;
+}
+
+.sidebar__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgray;
+    
+}
+
+.sidebar__headerRight {
+    flex: auto;
+}
+
+.sidebar__search {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    height: 39px;
+    padding: 10px;
+}
+
+.sidebar__searchContainer {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+}
+
+.sidebar__searchContainer > .MuiSvgIcon-root {
+    color: gray;
+    padding: 10px;
+}
+
+.sidebar__searchContainer > input {
+    border: none;
+    border-radius: 20px;
+    outline-width: 0; /* when the input is clicked, there is no box outline*/
+    margin-right: 10px;
+    margin-left: -5px;
+}
+
+.sidebar__chats {
+    flex: 1;
+    background-color: white;
+    overflow: scroll;
+}
